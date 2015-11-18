@@ -1,0 +1,9 @@
+[package]
+name = "phoronix-reader"
+version = "0.1.0"
+authors = ["Michael Aaron Murphy <mmstickman@gmail.com>"]
+
+[dependencies]
+hyper = "*"
+select = "0.2.0"
+term = "*"
