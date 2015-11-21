@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Linux Hardware Reviews, Open-Source Benchmarks &amp; Linux Performance - Phoronix</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" href="phxcms-css/phoronix-10.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+		<link href="phxcms7-css/shadowbox.css" rel="stylesheet" type="text/css" />
+		<script src="phxcms7-css/shadowbox.js" type="text/javascript"></script>
+		<meta name="keywords" content="Phoronix, Linux Hardware Reviews, Linux hardware benchmarks, Linux Hardware, Linux benchmarking, Desktop Linux, GNU/Linux benchmarks, Open Source AMD, Linux How To, X.Org drivers, Ubuntu hardware, Phoronix Test Suite" />
+		<meta name="Description" content="Phoronix is the leading technology website for Linux hardware reviews, open-source news, Linux benchmarks, open-source benchmarks, and computer hardware tests." />
+		<link rel="alternate" type="application/rss+xml" title="Phoronix" href="rss.php" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192" />
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+		<meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+				<script type="text/JavaScript">// <![CDATA[
+		var aax_src='1096';
+		var amzn_slots = new Array();
+		var url = encodeURIComponent(document.location);
+		try { url = encodeURIComponent("" + window.top.location); } catch(e) {}
+		document.write("<scr"+"ipt src='//aax-us-east.amazon-Adsystem.com/e/dtb/bid?src=" + aax_src + "&u="+url+"&cb=" + Math.round(Math.random()*10000000) + "'></scr"+"ipt>"); 
+		document.close();
+		// ]]></script>
+		<script type="text/JavaScript">// <![CDATA[
+		/*custom amzn*/
+		var a728p1 = 0;
+		var a728p2 = 0;
+		var a728p3 = 0;
+		var a728p4 = 0; 
+		var a300p1 = 0;
+		var a300p2 = 0;
+		var a300p3 = 0;
+		var a300p4 = 0;
+
+		for (var i in document.amzn_slots) {
+		console.log(document.amzn_slots[i]);
+		if(document.amzn_slots[i] == "a728x90p1"){a728p1=1;};
+		if(document.amzn_slots[i] == "a728x90p2"){a728p2=1;};
+		if(document.amzn_slots[i] == "a728x90p3"){a728p3=1;};
+		if(document.amzn_slots[i] == "a728x90p4"){a728p4=1;}; 
+		if(document.amzn_slots[i] == "a300x250p1"){a300p1=1;};
+		if(document.amzn_slots[i] == "a300x250p2"){a300p2=1;};
+		if(document.amzn_slots[i] == "a300x250p3"){a300p3=1;};
+		if(document.amzn_slots[i] == "a300x250p4"){a300p4=1;}; 
+		}
+		// ]]></script>
+				<!-- PHXCMS-10 (phoronix.com) -->
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-1978569-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+
+		    Shadowbox.init({
+		       skipSetup: true
+		   });
+		</script>
+	</head>
+	<body>
+		<div id="headerwrap">
+			<div class="wcontainer defpadding">
+				<a href="?page=home"><img id="logo" src="/phxcms7-css/phoronix.png" style="height: 40px; margin-top: 5px;margin-left: 5px;" /></a>
+				<div id="headerright">
+					<div id="social">
+					    <a href="http://www.phoronix.com/rss.php" class="icon-rss"></a>
+					    <a href="https://www.google.com/+phoronix" class="icon-gplus"></a>
+					    <a href="https://twitter.com/Phoronix" class="icon-twitter"></a>
+					    <a href="https://www.facebook.com/Phoronix" class="icon-facebook"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="litemenu">
+		    <ul>
+		        <li><a href="?page=phoronix_articles">Articles &amp; Reviews</a></li>
+		        <li><a href="?page=phoronix_news">News Archive</a></li>
+		        <li><a href="/forums/">Forums</a></li>
+		        <li><a href="?page=phoronix_premium">Premium</a></li>
+		        <li class="categ icon-angle-circled-down"><span> Categories</span></li>
+		        <li><a href="?page=category&amp;item=Computers">Computers</a></li>
+				<li><a href="?page=category&amp;item=Display+Drivers">Display Drivers</a></li>
+				<li><a href="?page=category&amp;item=Graphics+Cards">GPUs / Graphics Cards</a></li>
+				<li><a href="?page=category&amp;item=Linux+Gaming">Linux Gaming</a></li>
+				<li><a href="?page=category&amp;item=Memory">Memory</a></li>
+				<li><a href="?page=category&amp;item=Motherboards">Motherboards</a></li>
+				<li><a href="?page=category&amp;item=Processors">CPUs / Processors</a></li>
+				<li><a href="?page=category&amp;item=Software">Software</a></li>
+				<li><a href="?page=category&amp;item=Storage">Storage</a></li>
+				<li><a href="?page=category&amp;item=Operating+Systems">Operating Systems</a></li>
+				<li><a href="?page=category&amp;item=Peripherals">Peripherals</a></li>
+				<li id="closelid">Close</li>
+		    </ul>		    
+		</div>
+		<div id="menuwrap">
+			<div class="wcontainer">
+				<ul id="linklist">
+					<nav>
+					<li id="menubutton"><span class="icon-menu"></span>
+					</li>
+					<li class="menulink">
+						<a class="linknode" href="?page=phoronix_articles">Articles &amp; Reviews</a>
+					</li>
+					<li class="menulink">
+						<a class="linknode" href="?page=phoronix_news">News Archive</a>
+					</li>
+					<li class="menulink">
+						<a class="linknode" href="/forums/">Forums</a>
+					</li>
+					<li class="menulink">
+						<a class="linknode" href="?page=phoronix_premium">Premium</a>
+					</li>
+					<li id="categories-link" class="menulink">
+						<span class="menunolink icon-angle-circled-down"> Categories</span>
+						<div id="categories-list">
+							<div id="categories-content">
+								<a href="?page=category&amp;item=Computers">Computers</a>
+								<a href="?page=category&amp;item=Graphics+Cards">GPUs / Graphics Cards</a>
+								<a href="?page=category&amp;item=Linux+Gaming">Linux Gaming</a>
+								<a href="?page=category&amp;item=Memory">Memory</a>
+								<a href="?page=category&amp;item=Motherboards">Motherboards</a>
+								<a href="?page=category&amp;item=Processors">CPUs / Processors</a>
+								<a href="?page=category&amp;item=Software">Software</a>
+								<a href="?page=category&amp;item=Storage">Storage</a>
+								<a href="?page=category&amp;item=Operating+Systems">Operating Systems</a>
+								<a href="?page=category&amp;item=Peripherals">Peripherals</a>
+							</div>
+						</div>
+					</li>
+					<li id="searchbox">
+						<div id="search">
+							<form action="https://www.google.com" id="cse-search-box" target="_blank">
+							  <div>
+							    <input type="hidden" name="cx" value="partner-pub-0253814508491313:1305299758" />
+							    <input type="hidden" name="ie" value="UTF-8" />
+							    <input type="text" name="q" />
+							    <input type="submit" name="sa" value="Search" />
+							  </div>
+							</form>
+
+							<script type="text/javascript" src="https://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+						</div>
+					</li>
+					</nav>
+				</ul>
+			</div>
+		</div>
+		<div id="content-bg">
+			<div id="content">
+				<div id="main-wrap">
+					<div id="main">
+						<div style="text-align: center; overflow: hidden; margin-bottom: 30px;">
+								<script type='text/javascript' src='https://www.googletagservices.com/tag/js/gpt.js'>
+		googletag.pubads().definePassback('8456/IDG.Phoronix.com_Homepage', [[728,90]]).display();
+	</script>
+<noscript><a href="/pts-banner.php?click"><img src="/pts-banner.php?img" alt="Support Phoronix" /></a></noscript>
+						</div>
+						<!-- google_ad_section_start --><article>
+							<header><a href="?page=news_item&amp;px=GPU-Binary-Blob-Survey">Phoronix Readers Are Still Mostly Relying Upon Proprietary Linux GPU Drivers</a></header>
+							<p>Asked via @Phoronix on Twitter this weekend was whether you're using the open or closed-source graphics drivers.</p>
+							<div class="details">14 Minutes Ago - <a href="?page=news_topic&amp;q=Phoronix">Phoronix</a> - Binary Blobs<span class="comments"> - <a href="/forums/node/835058">Add A Comment</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=SPIR-V-1.0-Details">What You Need To Know About SPIR-V 1.0</a></header>
+							<p>For those that haven't been paying attention to SPIR-V as the new intermediate representation that makes up OpenCL 2.1+ and Vulkan, here's various details about this newest Khronos Group specification you may not be familiar with now that Khronos formally released OpenCL 2.1 and SPIR-V 1.0..</p>
+							<div class="details">4 Hours Ago - <a href="?page=news_topic&amp;q=Standards">Standards</a> - SPIR-V 1.0<span class="comments"> - <a href="/forums/node/835021">1 Comment</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=KDE-Plasma-5.5-Screenlock">KDE Plasma 5.5 To Have Secure Lockscreen On Wayland</a></header>
+							<p>Bhushan Shah has shared the recent work he's been doing on KDE's KWin to have proper screenlocker integration on Wayland.</p>
+							<div class="details">6 Hours Ago - <a href="?page=news_topic&amp;q=KDE">KDE</a> - KWin Screen Locking<span class="comments"> - <a href="/forums/node/834993">6 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=More-AMD-HCC-Details">AMD Working On CUDA Source Translation Support To Execute On FirePro GPUs</a></header>
+							<p>Early this morning I wrote a brief article about AMD working on an LLVM-based Heterogeneous Compute Compiler and since then more details have come to light.</p>
+							<div class="details">6 Hours Ago - <a href="?page=news_topic&amp;q=AMD">AMD</a> - HIP HCC<span class="comments"> - <a href="/forums/node/834978">11 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Khronos-OpenCL-SPIR-SC15">Khronos Releases OpenCL 2.1 &amp; SPIR-V 1.0 Specifications</a></header>
+							<p>The Khronos Group has formally released the OpenCL 2.1 and SPIR-V 1.0 specifications coinciding with this year's SuperComputing conference in Austin.</p>
+							<div class="details">7 Hours Ago - <a href="?page=news_topic&amp;q=Standards">Standards</a> - Specs!<span class="comments"> - <a href="/forums/node/834963">12 Comments</a></span></div>
+						</article><article class="important">
+							<header><a href="/vr.php?view=22414">Everything You Need To Know About The NVIDIA Jetson TX1 Performance</a></header>
+							<p>While last week we were able to write about the NVIDIA Jetson TX1 development board, at that time we weren't able to share any benchmarks or hands-on experience with this ARM board powered by NVIDIA's Tegra X1 SoC. The embargo on that has now expired and as such this morning there are a lot of benchmarks to share with you. There are many benchmarks looking at different areas of the Jetson TX1 including power consumption and thermal. For kicks I've also done some comparisons against the Tegra 2 and Tegra 3 as well as other ARM hardware like the now defunct Calxeda ARM server and Raspberry Pi 2.</p>
+							<div class="details">8 Hours Ago - <a href="?page=category&amp;item=Computers">Computers</a><span class="comments"> - <a href="/forums/node/834956">19 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Falcon-No-SteamOS-For-Now">Falcon Northwest Decides Against Steam Machines With SteamOS</a></header>
+							<p>High-end PC maker Falcon Northwest has decided against rolling out any Steam Machines this year powered by Valve's Debian-based SteamOS, due to problems with the operating system.</p>
+							<div class="details">8 Hours Ago - <a href="?page=news_topic&amp;q=Valve">Valve</a> - SteamOS Issues<span class="comments"> - <a href="/forums/node/834957">10 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=AMD-HCC-LLVM-Plans">AMD Plans To Contribute Heterogeneous Compute Compiler</a></header>
+							<p>AMD has been open-sourcing several components of their Linux HSA (Heterogeneous System Architecture) stack for the past several months including the AMDKFD kernel driver and HSAKMT run-time. In cooperation with SUSE, they also hope to have HSA accelerator support in GCC 6. Besides the GCC support, AMD is apparently planning to publish a Heterogeneous Compute Compiler.</p>
+							<div class="details">9 Hours Ago - <a href="?page=news_topic&amp;q=AMD">AMD</a> - Heterogeneous Compute Compiler<span class="comments"> - <a href="/forums/node/834935">4 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=GPUCC-CUDA-GPGPU-Comp">GPUCC: Google's Open-Source CUDA Compiler</a></header>
+							<p>Last month I wrote about how Google has been working on CUDA compiler optimizations in LLVM and they were claiming to achieve results where their open-source compiler work was generating better code than NVIDIA's own NVCC compiler. More details are now available.</p>
+							<div class="details">10 Hours Ago - <a href="?page=news_topic&amp;q=Compiler">Compiler</a> - GPUCC Compiler<span class="comments"> - <a href="/forums/node/834931">5 Comments</a></span></div>
+						</article><div style="text-align: center; overflow: hidden; margin-bottom: 30px;"><p align="center"><script type="text/javascript"><!--
+	e9 = new Object();
+    e9.size = "970x250,728x90";
+//--></script>
+<script type="text/javascript" src="//tags.expo9.exponential.com/tags/Phoronixcom/ROS/tags.js"></script></p>
+</div><h2>15 November</h2><article>
+							<header><a href="?page=news_item&amp;px=Linux-4.4-RC1-Released">Linux 4.4-rc1 Kernel Released</a></header>
+							<p>Linus Torvalds announced today the first release candidate for Linux 4.4.</p>
+							<div class="details">15 November 08:33 PM EST - <a href="?page=news_topic&amp;q=Linux Kernel">Linux Kernel</a> - Linux 4.4<span class="comments"> - <a href="/forums/node/834892">Add A Comment</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Firefox-FFmpeg-Default">Firefox Enables FFmpeg Support By Default</a></header>
+							<p>For those with FFmpeg present on their system, Mozilla developers have finally enabled FFmpeg support to be used by default.</p>
+							<div class="details">15 November 02:01 PM EST - <a href="?page=news_topic&amp;q=Mozilla">Mozilla</a> - Firefox FFmpeg<span class="comments"> - <a href="/forums/node/834842">31 Comments</a></span></div>
+						</article><article class="important">
+							<header><a href="/vr.php?view=22405">A Look At The New Features Of The Linux 4.4 Kernel</a></header>
+							<p>If all goes according to plan, the Linux 4.4 kernel merge window will end today with the release of the 4.4-rc1 kernel. As all of the major subsystem updates have already landed for Linux 4.4, here's my usual look at the highlights for this kernel cycle.</p>
+							<div class="details">15 November 11:00 AM EST - <a href="?page=category&amp;item=Software">Software</a><span class="comments"> - <a href="/forums/node/834822">3 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Kodi-16-Beta-Released">Kodi 16 &quot;Jarvis&quot; Is Now In Beta</a></header>
+							<p>Developers behind Kodi (formerly XBMC) announced the release this morning of Jarvis Beta 1.</p>
+							<div class="details">15 November 09:50 AM EST - <a href="?page=news_topic&amp;q=Multimedia">Multimedia</a> - Kodi 16 Beta 1<span class="comments"> - <a href="/forums/node/834814">9 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=BFS-For-Linux-4.3">BFS Scheduler Updated For The Linux 4.3 Kernel</a></header>
+							<p>Con Kolivas has released the BFS scheduler v0.465 with support for the Linux 4.3 kernel.</p>
+							<div class="details">15 November 09:02 AM EST - <a href="?page=news_topic&amp;q=Linux Kernel">Linux Kernel</a> - Brain F Scheduler<span class="comments"> - <a href="/forums/node/834813">9 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Nov2015-Fresh-Clang-O">Some Fresh Clang Optimization Benchmarks</a></header>
+							<p>As some extra benchmarks to toss out there this weekend are some Clang 3.8 SVN compiler benchmarks when trying out different optimization levels.</p>
+							<div class="details">15 November 08:38 AM EST - <a href="?page=news_topic&amp;q=Compiler">Compiler</a> - Optimization Levels<span class="comments"> - <a href="/forums/node/834812">7 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Caffe-In-Phoronix-PTS">Caffe AlexNet Deep Learning Benchmark Added</a></header>
+							<p>In addition to adding some new OpenCL / CUDA tests this week to the Phoronix Test Suite and OpenBenchmarking.org, Caffe was added too as a deep learning benchmark.</p>
+							<div class="details">15 November 07:30 AM EST - <a href="?page=news_topic&amp;q=Free Software">Free Software</a> - Caffe Benchmark<span class="comments"> - <a href="/forums/node/834810">5 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Nouveau-NV50-Compute">Nouveau NV50 Gets Basic Compute Support, A Step Towards OpenCL</a></header>
+							<p>Just one week after Mesa Git received Nouveau NVC0 compute support, the NV50 Gallium3D driver for pre-Fermi GPUs has also received basic compute support.</p>
+							<div class="details">15 November 07:11 AM EST - <a href="?page=news_topic&amp;q=Nouveau">Nouveau</a> - Open-Source Compute<span class="comments"> - <a href="/forums/node/834808">1 Comment</a></span></div>
+						</article><div style="text-align: center; overflow: hidden; margin-bottom: 30px;">	<script type='text/javascript' src='https://www.googletagservices.com/tag/js/gpt.js'>
+		googletag.pubads().definePassback('8456/IDG.Phoronix.com_Homepage', [[728,90]]).display();
+	</script>
+</div><h2>14 November</h2><article>
+							<header><a href="?page=news_item&amp;px=OpenMP-4.5-Released">OpenMP 4.5 Now Available</a></header>
+							<p>Just ahead of the Super Computing SC15 conference beginning tomorrow in Austin, the OpenMP 4.5 specification has been finalized.</p>
+							<div class="details">14 November 05:51 PM EST - <a href="?page=news_topic&amp;q=Standards">Standards</a> - OpenMP<span class="comments"> - <a href="/forums/node/834776">1 Comment</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Linux-4.4-20.8M-Stats">Linux 4.4 Is Checking In At Over 20.8 Million Lines</a></header>
+							<p>With the Linux 4.3 Git tree at around 20.6 million lines of code, documentation, and utilities, I was curious to see whether the Linux 4.4 merge window was heavy enough to bump it over 21 million lines...</p>
+							<div class="details">14 November 04:01 PM EST - <a href="?page=news_topic&amp;q=Linux Kernel">Linux Kernel</a> - Linux 4.4 Git Stats<span class="comments"> - <a href="/forums/node/834765">Add A Comment</a></span></div>
+						</article><article class="important">
+							<header><a href="/vr.php?view=22398">PHP 7.0 vs. HHVM 3.10 Performance Tests</a></header>
+							<p>With PHP 7.0 RC7 being the final development version of PHP 7, which is expected to be officially release at the end of the month, I've carried out some fresh benchmarks of PHP using our in-house benchmarking software. Compared in this latest PHP 7 benchmarking comparison is PHP 5.5 as packaged on Ubuntu 14.04 LTS and then comparing fresh builds of PHP 5.6.15 and PHP 7.0.0 RC7. On the HHVM side was using Facebook's HHVM 3.10.1 release as packaged for Ubuntu 14.04 LTS.</p>
+							<div class="details">14 November 02:20 PM EST - <a href="?page=category&amp;item=Software">Software</a><span class="comments"> - <a href="/forums/node/834755">6 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=KDE-Frameworks-5.16">KDE Frameworks 5.16 Released</a></header>
+							<p>The KDE community has announced the release of Frameworks 5.16.0 as more than 60 add-on libraries to Qt.</p>
+							<div class="details">14 November 11:22 AM EST - <a href="?page=news_topic&amp;q=KDE">KDE</a> - KDE Frameworks 5.16<span class="comments"> - <a href="/forums/node/834749">Add A Comment</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Linux-Room-Computer-Vent">Cooling Is Finally Set For The Dozens Of Linux Benchmarking Systems</a></header>
+							<p>After months of continually trying out different methods of cheap yet effective cooling for the 60+ systems running daily Linux benchmarks, I'm finally happy with now having been one week of the room maintaining an ambient temperature of 68~72F (20~22C).</p>
+							<div class="details">14 November 09:00 AM EST - <a href="?page=news_topic&amp;q=Hardware">Hardware</a> - Cooling + Ventilation<span class="comments"> - <a href="/forums/node/834732">6 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Chrome-Linux-4.4-Pull">Chrome Platform Updates Sent In For Linux 4.4</a></header>
+							<p>Various kernel changes were mainlined in the Linux 4.4 development code for Google Chrome hardware.</p>
+							<div class="details">14 November 08:28 AM EST - <a href="?page=news_topic&amp;q=Google">Google</a> - Chrome Linux 4.4<span class="comments"> - <a href="/forums/node/834727">Add A Comment</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=QEMU-2.5-rc0-Released">QEMU 2.5-RC0 Released, Supports VirtIO-GPU 3D Mode</a></header>
+							<p>The first release candidate is out today for QEMU v2.5 and it comes with exciting changes.</p>
+							<div class="details">14 November 08:00 AM EST - <a href="?page=news_topic&amp;q=Virtualization">Virtualization</a> - QEMU 2.5<span class="comments"> - <a href="/forums/node/834725">3 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=LLVM-SLP-HOR-Default">LLVM Enables New SLP Vectorize Option By Default</a></header>
+							<p>LLVM developers have decided to enable a new vectorizer option by default that has the potential to boost performance, but the performance benefits aren't immediately clear.</p>
+							<div class="details">14 November 07:38 AM EST - <a href="?page=news_topic&amp;q=Compiler">Compiler</a> - slp-vectorize-hor<span class="comments"> - <a href="/forums/node/834724">1 Comment</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Linux-4.4-ESC-Key-Patch">Shoddy Laptop? Linux 4.4 Gets Patch To Support ESC Key On Lenovo Laptop</a></header>
+							<p>With the Linux 4.4 kernel the Lenovo Yoga 3 laptop owners out there will finally have support for using their ESC key.</p>
+							<div class="details">14 November 07:18 AM EST - <a href="?page=news_topic&amp;q=Linux Kernel">Linux Kernel</a> - Platform Driver Update<span class="comments"> - <a href="/forums/node/834722">12 Comments</a></span></div>
+						</article><h2>13 November</h2><article>
+							<header><a href="?page=news_item&amp;px=NVIDIA-Fortran-LLVM-NNSA">NNSA &amp; NVIDIA To Develop LLVM Fortran Compiler</a></header>
+							<p>The US Department of Energy's National Nuclear Security Administration has teamed up with NVIDIA's PGI compiler division to create an open-source Fortran compiler atop LLVM.</p>
+							<div class="details">13 November 04:38 PM EST - <a href="?page=news_topic&amp;q=NVIDIA">NVIDIA</a> - Open-Source Fortran Compiler<span class="comments"> - <a href="/forums/node/834673">16 Comments</a></span></div>
+						</article><article class="important">
+							<header><a href="/vr.php?view=22392">AMD Tonga &amp; Fiji Open-Source Performance Boosted By PowerPlay Patches</a></header>
+							<p>Yesterday AMD finally posted power management support for the AMDGPU DRM kernel driver when it comes to supported discrete graphics cards like Tonga and Fiji. I've been testing these PowerPlay Linux patches since yesterday to great success. In this article are results from a Radeon R9 285 and Radeon R9 Fury when testing these kernel patches along with the latest Mesa 11.1-devel Git drivers.</p>
+							<div class="details">13 November 10:30 AM EST - <a href="?page=category&amp;item=Display Drivers">Display Drivers</a><span class="comments"> - <a href="/forums/node/834606">52 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Wine-1.7.55-Released">Wine 1.7.55 Adds The PulseAudio Driver</a></header>
+							<p>Wine 1.7.55 was released this morning with some exciting changes.</p>
+							<div class="details">13 November 09:48 AM EST - <a href="?page=news_topic&amp;q=WINE">WINE</a> - Wine 1.7.55<span class="comments"> - <a href="/forums/node/834600">27 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=AMD-Coreboot-CC6">Coreboot Adds CC6 To Improve AMD Power Savings</a></header>
+							<p>Added to Coreboot this week was CC6 support to provide greater power-savings for current-generation AMD processors.</p>
+							<div class="details">13 November 07:23 AM EST - <a href="?page=news_topic&amp;q=Coreboot">Coreboot</a> - AMD CC6<span class="comments"> - <a href="/forums/node/834570">1 Comment</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=GCC-6-Enabled-Libmpx">GCC 6 To Enable Intel's MPX Library By Default</a></header>
+							<p>Since GCC 5 there has been support for Intel Memory Protection Extensions (MPX) in the compiler, but it's been disabled by default. That's now changing.</p>
+							<div class="details">13 November 07:08 AM EST - <a href="?page=news_topic&amp;q=Compiler">Compiler</a> - Memory Protection<span class="comments"> - <a href="/forums/node/834567">Add A Comment</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=XDC-2016-Helsinki-Go">X.Org Developers' Conference 2016 To Be Hosted In Finland</a></header>
+							<p>The X.Org Foundation Board of Directors decided at yesterday's bi-weekly board meeting to go ahead with a plan to host XDC2016 in Helsinki, Finland.</p>
+							<div class="details">13 November 06:53 AM EST - <a href="?page=news_topic&amp;q=X.Org">X.Org</a> - Helsinki<span class="comments"> - <a href="/forums/node/834564">7 Comments</a></span></div>
+						</article><h2>12 November</h2><article>
+							<header><a href="?page=news_item&amp;px=Football-Manager-2016-Linux">Football Manager 2016 Released For SteamOS / Linux</a></header>
+							<p>Football Manager 2016 was released today by SEGA. Compared to the past where the Linux port came after the fact, Football Manager 2016 has seen a same-day release for Windows, OS X, and SteamOS/Linux.</p>
+							<div class="details">12 November 08:57 PM EST - <a href="?page=news_topic&amp;q=Gaming">Gaming</a> - Football Manager Linux<span class="comments"> - <a href="/forums/node/834516">10 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Phoronix-Test-Suite-6-NW">Preparing For Phoronix Test Suite 6.0-Hammerfest Next Week</a></header>
+							<p>Phoronix Test Suite 6.0 "Hammerfest" is ready for release next week and as such being put out tonight is the final development build.</p>
+							<div class="details">12 November 08:04 PM EST - <a href="?page=news_topic&amp;q=Phoronix">Phoronix</a> - Phoronix Test Suite 6.0<span class="comments"> - <a href="/forums/node/834512">Add A Comment</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=GNOME-3.18.2-Released">GNOME 3.18.2 Brings Bug Fixes &amp; Translation Updates</a></header>
+							<p>Matthias Clasen announced the release today of GNOME 3.18.2 while all feature development continues to be around the GNOME 3.19 series culminating with GNOME 3.20.</p>
+							<div class="details">12 November 06:14 PM EST - <a href="?page=news_topic&amp;q=GNOME">GNOME</a> - GNOME 3.18.2<span class="comments"> - <a href="/forums/node/834500">3 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Microsoft-1-Year-dotNET">It's Been One Year Since Microsoft Announced .NET Open-Source, Linux Plans</a></header>
+							<p>Today marks one year since Microsoft announced they would be working on open-sourcing the server-side .NET and also making .NET run on Linux and OS X. Since then, it's been one heck of a year for Microsoft on Linux.</p>
+							<div class="details">12 November 04:29 PM EST - <a href="?page=news_topic&amp;q=Proprietary Software">Proprietary Software</a> - Open-Source .NET On Linux<span class="comments"> - <a href="/forums/node/834473">26 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=AMD-GPU-PowerPlay-Init">AMDGPU PowerPlay Is Working Great So Far; Here's An Ubuntu PowerPlay Kernel</a></header>
+							<p>With AMD having published PowerPlay support for AMDGPU I've been busy today running tests on this new power management code that finally allows Tonga and Fiji GPUs to operate at their full-speed when using the open-source Linux graphics driver.</p>
+							<div class="details">12 November 03:29 PM EST - <a href="?page=news_topic&amp;q=AMD">AMD</a> - AMDGPU PowerPlay<span class="comments"> - <a href="/forums/node/834455">26 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=CMake-3.4-Released">CMake 3.4.0 Released</a></header>
+							<p>KitWare announced the release today of the CMake 3.4 build system.</p>
+							<div class="details">12 November 02:38 PM EST - <a href="?page=news_topic&amp;q=Free Software">Free Software</a> - CMake 3.4<span class="comments"> - <a href="/forums/node/834441">Add A Comment</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=RPi-2-Benchmarks">Are There Any Raspberry Pi 2 Benchmarks You'd Like To See?</a></header>
+							<p>While the level of performance out of the Raspberry Pi devices have had me less than interested, I decided to finally pick up a Raspberry Pi 2 anyways for some benchmarking and testing of the VC4 DRM+Gallium3D driver stack.</p>
+							<div class="details">12 November 01:55 PM EST - <a href="?page=news_topic&amp;q=Hardware">Hardware</a> - Raspberry Pi 2 Benchmarks<span class="comments"> - <a href="/forums/node/834430">25 Comments</a></span></div>
+						</article><article class="important">
+							<header><a href="/vr.php?view=22391">AMD Catalyst On Windows vs. Open-Source Radeon On Linux</a></header>
+							<p>Here's the third installment of our Windows vs. Linux OpenGL benchmarking this week... This is a look at how the AMD Catalyst closed-source driver on Windows compares to AMD's latest open-source driver code on Linux.</p>
+							<div class="details">12 November 11:30 AM EST - <a href="?page=category&amp;item=Display Drivers">Display Drivers</a><span class="comments"> - <a href="/forums/node/834393">25 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=PHP-7.0-RC7-Released">PHP 7.0 RC7 Released, PHP 7 Final Gets Pushed Back</a></header>
+							<p>While the highly anticipated PHP 7 release was supposed to happen today, it hasn't as instead it's been replaced by another release candidate.</p>
+							<div class="details">12 November 10:43 AM EST - <a href="?page=news_topic&amp;q=Compiler">Compiler</a> - PHP 7.0<span class="comments"> - <a href="/forums/node/834384">6 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Kubuntu-New-RMs">Kubuntu Announces New Release Managers</a></header>
+							<p>Kubuntu is moving on in the absence of Jonathan Riddell who left the project and his longtime role as the release manager.</p>
+							<div class="details">12 November 10:30 AM EST - <a href="?page=news_topic&amp;q=Ubuntu">Ubuntu</a> - Kubuntu Release Managers<span class="comments"> - <a href="/forums/node/834382">10 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Linux-4.4-XFS-Updates">XFS In Linux 4.4 Isn't Too Exciting</a></header>
+							<p>Dave Chinner has now sent in the XFS file-system updates for the Linux 4.4 kernel.</p>
+							<div class="details">12 November 09:56 AM EST - <a href="?page=news_topic&amp;q=Linux Kernel">Linux Kernel</a> - XFS File-System Updates<span class="comments"> - <a href="/forums/node/834377">3 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=AMDGPU-PowerPlay-Patches">AMD Publishes AMDGPU PowerPlay Support For Re-Clocking / Power Management</a></header>
+							<p>AMD has finally published patches for providing preliminary PowerPlay support for the AMDGPU DRM driver, which will eventually replace the current DPM (Dynamic Power Management) support for Volcanic Islands hardware. This PowerPlay support comes with compatibility for Tonga, Fiji, and the rest of the VI line-up!</p>
+							<div class="details">12 November 09:16 AM EST - <a href="?page=news_topic&amp;q=AMD">AMD</a> - AMDGPU Power Management!<span class="comments"> - <a href="/forums/node/834362">32 Comments</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=KDE-Screen-Wayland-Speed">KDE Screen Querying Is Much Faster On Wayland</a></header>
+							<p>KDE's Sebastian Kügler has been blogging about KDE Plasma on Wayland lately and some of the ongoing work. Today he shared some interesting performance numbers.</p>
+							<div class="details">12 November 09:04 AM EST - <a href="?page=news_topic&amp;q=KDE">KDE</a> - KScreen<span class="comments"> - <a href="/forums/node/834363">1 Comment</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Firefox-OS-2.5-DP">Firefox OS 2.5 Developer Preview On Android Is Out</a></header>
+							<p>Mozilla this week released Firefox OS 2.5 as well as a Firefox OS 2.5 Developer Preview that can be downloaded to Android devices.</p>
+							<div class="details">12 November 08:53 AM EST - <a href="?page=news_topic&amp;q=Mozilla">Mozilla</a> - Firefox OS<span class="comments"> - <a href="/forums/node/834358">1 Comment</a></span></div>
+						</article><article>
+							<header><a href="?page=news_item&amp;px=Radeon-7.6.0-DDX">Radeon DDX Update Brings DRI3, DP 1.2 MST, Tear-Free</a></header>
+							<p>Michel Dänzer has released the xf86-video-ati 7.6.0 DDX driver as a long overdue update to AMD's X.Org driver for pre-AMDGPU hardware.</p>
+							<div class="details">12 November 08:27 AM EST - <a href="?page=news_topic&amp;q=AMD">AMD</a> - xf86-video-ati 7.6.0<span class="comments"> - <a href="/forums/node/834352">14 Comments</a></span></div>
+						</article><h1 style="margin: 30px 0 40px;"><a href="?page=recent">Past 30 Days Of News</a> | <a href="?page=phoronix_articles">Articles &amp; Reviews</a> | <a href="?page=phoronix_news">News Archives</a> | <a href="/rss.php">RSS Feed</a></h1>
+<!-- google_ad_section_end -->
+					</div>
+				</div>
+				<div id="sidebar-wrap">
+					<div id="sidebar">
+					    <aside>
+						<div style="text-align: center; overflow: hidden;">
+                           				<p><script type="text/javascript"><!--
+	e9 = new Object();
+    e9.size = "300x250";
+//--></script>
+<script type="text/javascript" src="//tags.expo9.exponential.com/tags/Phoronixcom/ROS/tags.js"></script></p>
+                        </div>
+                        </aside>
+                        <aside class="widget">
+			<header>Most Popular News This Week</header><div class="popular-list">
+                                <a href="?page=news_item&amp;px=AMD-GPU-PowerPlay-Init">AMDGPU PowerPlay Is Working Great So Far; Here's An Ubuntu PowerPlay Kernel</a>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=Microsoft-1-Year-dotNET">It's Been One Year Since Microsoft Announced .NET Open-Source, Linux Plans</a>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=Steam-Machine-Launch-Sale">Valve Launches A Massive Sale Of SteamOS (Linux) Titles</a>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=Linux-4.4-Features-So-Far">Features Published So Far In The Linux 4.4 Kernel</a>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=KDBUS-Back-To-Design">KDBUS Is Indeed Going Back To The Drawing Board</a>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=Wine-1.7.55-Released">Wine 1.7.55 Adds The PulseAudio Driver</a>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=Xorg-Server-1.18">X.Org Server 1.18 Officially Released</a>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=Vulkan-LunarG-Split">Vulkan Experts LunarG Split Into Two, Mobile Guys Head To Google</a>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=SteamOS-Linux-Market-Poll">Readers: SteamOS / Steam Machines Will Lead To Significantly Greater Linux Marketshare</a>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=Football-Manager-2016-Linux">Football Manager 2016 Released For SteamOS / Linux</a>
+                            </div>
+<header>Popular In The Forums</header><div class="popular-list">
+                                <a href="/forums/node/834606&amp;goto=newpost">AMD Tonga & Fiji Open-Source Performance Boosted By PowerPlay Patches</a>
+                                <span class="comments">52 Comments</span>
+                            </div>
+<div class="popular-list">
+                                <a href="/forums/node/834075&amp;goto=newpost">NVIDIA JTX1: Finally An Exciting 64-bit ARM Board!</a>
+                                <span class="comments">50 Comments</span>
+                            </div>
+<div class="popular-list">
+                                <a href="/forums/node/833883&amp;goto=newpost">NVIDIA OpenGL: Windows 10 Pro vs. Ubuntu Linux Benchmarks</a>
+                                <span class="comments">45 Comments</span>
+                            </div>
+<div class="popular-list">
+                                <a href="/forums/node/833827&amp;goto=newpost">Readers: SteamOS / Steam Machines Will Lead To Significantly Greater Linux Marketshare</a>
+                                <span class="comments">52 Comments</span>
+                            </div>
+<div class="popular-list">
+                                <a href="/forums/node/833825&amp;goto=newpost">KDBUS Is Indeed Going Back To The Drawing Board</a>
+                                <span class="comments">41 Comments</span>
+                            </div>
+                        </aside>
+			<aside>
+			<div style="text-align: center; overflow: hidden;">
+                          	<script type='text/javascript' src='https://www.googletagservices.com/tag/js/gpt.js'>
+		googletag.pubads().definePassback('8456/IDG.Phoronix.com_Homepage', [[160,600]]).display();
+	</script>
+                        </div>
+                        </aside>
+
+                        <aside class="widget">
+			<header>Latest Featured Articles</header><div class="popular-list">
+                                <a href="/vr.php?view=22414">Everything You Need To Know About The NVIDIA Jetson TX1 Performance</a>
+                            </div>
+<div class="popular-list">
+                                <a href="/vr.php?view=22405">A Look At The New Features Of The Linux 4.4 Kernel</a>
+                            </div>
+<div class="popular-list">
+                                <a href="/vr.php?view=22398">PHP 7.0 vs. HHVM 3.10 Performance Tests</a>
+                            </div>
+<div class="popular-list">
+                                <a href="/vr.php?view=22392">AMD Tonga &amp; Fiji Open-Source Performance Boosted By PowerPlay Patches</a>
+                            </div>
+<div class="popular-list">
+                                <a href="/vr.php?view=22391">AMD Catalyst On Windows vs. Open-Source Radeon On Linux</a>
+                            </div>
+<header>Popular Articles In The Past</header><div class="popular-list">
+                                <a href="?page=news_item&amp;px=Firefox-FFmpeg-Default">Firefox Enables FFmpeg Support By Default</a>
+                                <span class="comments">Yesterday</span>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=Linux-4.4-Features-So-Far">Features Published So Far In The Linux 4.4 Kernel</a>
+                                <span class="comments">7 Days Ago</span>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=Mir-0.17-Released">Mir 0.17.0 Brings Cookies, MirBlob</a>
+                                <span class="comments">One Month Ago</span>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=Oculus-Rift-Linux-Paused">Oculus Rift Suspends Linux Development To Focus On Windows</a>
+                                <span class="comments">Six Months Ago</span>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=MTg0MTA">Fedora 23~25 Might Switch Away From Firefox</a>
+                                <span class="comments">One Year Ago</span>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=MTUxNjg">Freedreno Graphics Driver Reaches Version 1.0</a>
+                                <span class="comments">Two Years Ago</span>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=MTIyOTg">Lenovo UEFI Only Wants To Boot Windows, RHEL</a>
+                                <span class="comments">Three Years Ago</span>
+                            </div>
+<div class="popular-list">
+                                <a href="?page=news_item&amp;px=ODc5MQ">Genode OS Now Has A LiveCD Demo With Gallium3D</a>
+                                <span class="comments">Five Years Ago</span>
+                            </div>
+                        </aside>
+			<aside>
+						<div style="text-align: center; overflow: hidden;">
+                           					<script type='text/javascript' src='https://www.googletagservices.com/tag/js/gpt.js'>
+		googletag.pubads().definePassback('8456/IDG.Phoronix.com_Homepage/IDG.Phoronix.com_Article', [[160,600]]).display();
+	</script>
+                        </div>
+                        </aside>
+                        <aside class="widget">
+                            <header>Support Phoronix</header>
+                            <p>The mission at Phoronix since 2004 has centered around enriching the Linux hardware experience. In addition to supporting our site through advertisements, you can help by <a href="?page=phoronix_premium">subscribing to Phoronix Premium</a>. You can also use our <a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&location=http%3A%2F%2Fwww.amazon.com%2F&tag=phoronix-20&linkCode=ur2&camp=1789&creative=390957">Amazon.com</a> shopping link when making online purchases or contribute to Phoronix through a <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3778540">PayPal tip</a> or <a href="http://www.phoronix.com/scan.php?page=news_item&px=Bitcoin-Premium">Bitcoin</a>.</p>
+                        </aside>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+		    <div id="footer-content">
+			<p align="center"><p align="center"><script type="text/javascript"><!--
+	e9 = new Object();
+    e9.size = "970x250,728x90";
+//--></script>
+<script type="text/javascript" src="//tags.expo9.exponential.com/tags/Phoronixcom/ROS/tags.js"></script></p>
+</p>
+		        <div id="footer-left">
+		        <div id="footer-left-content">
+		            <div class="extra-info">
+		                <header>Phoronix Media</header>
+		                <hr/>
+		                <ul>
+		                    <li><a href="http://www.phoronix-test-suite.com/">Phoronix Test Suite</a></li>
+		                    <li><a href="http://openbenchmarking.org/">OpenBenchmarking.org</a></li>
+		                    <li><a href="http://www.phoromatic.com/">Phoromatic</a></li>
+		                    <li><a href="http://www.linuxbenchmarking.com/">LinuxBenchmarking.com</a></li>
+		                </ul>
+		            </div>
+		            <div class="extra-info">
+		                <header>Phoronix Premium</header>
+		                <hr/>
+		                <a href="?page=phoronix_premium"><ul>
+                            <li>Support Phoronix</li>
+		                    <li>While Having Ad-Free Browsing,</li>
+                            <li>Single-Page Article Viewing</li>
+                        </ul></a>
+		            </div>
+		            <div class="extra-info">
+		                <header>Share</header>
+		                <hr/>
+		                <ul>
+		                    <li><a href="https://facebook.com/Phoronix">Facebook</a></li>
+		                    <li><a href="https://twitter.com/Phoronix">Twitter</a></li>
+		                    <li><a href="https://www.google.com/+phoronix">Google Plus</a></li>
+		                </ul>
+		            </div>
+		       </div>
+		       </div>
+		       <div id="footer-right">
+		            <div class="extra-info">
+		                <ul>
+		                <li><p><a href="http://www.phoronix-media.com/?k=legal">Legal Disclaimer</a> | <a href="http://www.phoronix-media.com/?k=contact">Contact</a> | <a href="?page=cookies">Cookie Policy</a></p></li>
+                        <li><p>Copyright &copy; 2004 - 2015 by <a href="http://www.phoronix-media.com/">Phoronix Media</a>.</p></li>
+                        <li><p>All trademarks used are properties of their respective owners. All rights reserved.</p></li>
+				</ul>
+		            </div>
+		        </div>
+		     </div>		   
+		</div>
+		<script type="text/javascript">
+		    function lmm () {
+		        if (litemenu.style.zIndex > 0)
+		            litemenu.style.zIndex = -1;
+		        else
+		            litemenu.style.zIndex = 1;
+		    }
+		    	    
+            menubutton.addEventListener('click', function() { lmm(); }, false);
+            closelid.addEventListener('click', function() { litemenu.style.zIndex = -1;}, false);
+		</script>
+			</body>
+</html>
+

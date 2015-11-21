@@ -1,5 +1,3 @@
-// split_by_chars() takes an input with the line length and splits the input into a vector of
-// lines that are split to fit within a specified character length.
 pub fn split_by_chars(input: &str, length: usize) -> Vec<String> {
     let words: Vec<&str> = input.split_whitespace().collect();
     let mut lines: Vec<String> = Vec::new();
