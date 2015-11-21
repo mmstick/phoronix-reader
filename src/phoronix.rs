@@ -19,7 +19,7 @@ fn get_homepage() -> String {
 // }
 
 pub fn print_homepage() {
-    let phoronix_articles = Article::get_articles(&get_homepage_offline());
+    let phoronix_articles = Article::get_articles(&get_homepage());
     for article in phoronix_articles.iter().rev() {
         println!("Title:   {}", article.title);
         println!("Link:    https://www.phoronix.com/{}", article.link);
