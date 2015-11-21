@@ -14,9 +14,9 @@ fn get_homepage() -> String {
     return body;
 }
 
-fn get_homepage_offline() -> String {
-    String::from(include_str!("phoronix.html"))
-}
+// fn get_homepage_offline() -> String {
+//     String::from(include_str!("phoronix.html"))
+// }
 
 pub fn print_homepage() {
     let phoronix_articles = Article::get_articles(&get_homepage_offline());
@@ -33,7 +33,7 @@ pub fn print_homepage() {
 }
 
 pub fn print_homepage_colored() {
-    let phoronix_articles = Article::get_articles(&get_homepage_offline());
+    let phoronix_articles = Article::get_articles(&get_homepage());
     let mut terminal = term::stdout().unwrap();
     for article in phoronix_articles.iter().rev() {
         print!("Title:   ");
