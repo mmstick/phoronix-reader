@@ -15,4 +15,4 @@ Simply run `cargo install` to build and install the project, or `cargo build --r
 ## Step-by-Step Making Of Tutorial
 
 I have also created a step-by-step tutorial detailing how this program was created on **Gitbooks**.
-https://www.gitbook.com/book/mmstick/guide-to-writing-the-phoronix-reader-in-rust/details
+https://www.gitbook.com/book/mmstick/rust-programming-phoronix-reader-how-to/
