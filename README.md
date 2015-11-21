@@ -1,6 +1,6 @@
 # Phoronix Reader
 
-This app allows users keep up-to-date with the latest Phoronix news from the comfort of their terminals.
+This app allows users to keep up-to-date with the latest Phoronix news from the comfort of their terminals.
 
 ## Screenshot
 
