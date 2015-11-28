@@ -4,6 +4,10 @@ version = "0.1.1"
 authors = ["Michael Aaron Murphy <mmstickman@gmail.com>"]
 
 [dependencies]
+gtk = { git = "https://github.com/gtk-rs/gtk" }
+gdk = { git = "https://github.com/gtk-rs/gdk" }
+pango = { git = "https://github.com/gtk-rs/pango" }
+getopts = "*"
 hyper = "*"
-select = "0.2.0"
+select = "*"
 term = "*"

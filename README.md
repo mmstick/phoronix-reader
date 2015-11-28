@@ -2,15 +2,21 @@
 
 This app allows users to keep up-to-date with the latest Phoronix news from the comfort of their terminals.
 
-## Screenshot
+## Screenshots
 
-![](screenshot.png)
+### Command-Line Interface
+![](screenshot_cli.png)
+
+### GTK3 Graphical User Interface
+![](screenshot_gui.png)
 
 ## Installation Guide
 
 To install, you will need to make sure that you have `Cargo` and `Rust` installed.
 
 Simply run `cargo install` to build and install the project, or `cargo build --release`.
+
+Because this project now has a GTK3 front-end, GTK3 development libs are required.
 
 ## Step-by-Step Making Of Tutorial
 
