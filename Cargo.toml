@@ -1,6 +1,6 @@
 [package]
 name = "phoronix-reader"
-version = "0.1.1"
+version = "0.2.0"
 authors = ["Michael Aaron Murphy <mmstickman@gmail.com>"]
 
 [dependencies]
@@ -11,3 +11,4 @@ getopts = "*"
 hyper = "*"
 select = "*"
 term = "*"
+

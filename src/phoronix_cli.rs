@@ -16,7 +16,7 @@ pub fn print() {
 }
 
 pub fn print_colored() {
-    let phoronix_articles = Article::get_articles(&homepage::offline());
+    let phoronix_articles = Article::get_articles(&homepage::online());
     let mut terminal = term::stdout().unwrap();
     for article in phoronix_articles.iter().rev() {
         print!("Title:   ");
