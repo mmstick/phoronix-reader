@@ -48,23 +48,24 @@ fn configure_window(window: &gtk::Window) {
 // generate_article_widgets takes a vector of articles as well as a gtk::Box and fills up the gtk::Box
 // with widgets generated from each article
 fn generate_article_widgets(article_box: &gtk::Box, articles: &Vec<Article>) {
-    let mut header_font = pango::FontDescription::new();
-    header_font.set_weight(pango::Weight::Heavy);
+    let mut bold = pango::FontDescription::new();
+    bold.set_weight(pango::Weight::Heavy);
     for article in articles {
         // Creates the title as a gtk::LinkButton for each article
         let url = format!("https://phoronix.com/{}", article.link);
         let title_and_url = gtk::LinkButton::new_with_label(&url, &article.title).unwrap();
+        title_and_url.override_background_color(gtk::StateFlags::empty(), &color!(green));
         title_and_url.override_color(gtk::StateFlags::empty(), &color!(white));
-        title_and_url.override_font(&header_font);
+        title_and_url.override_font(&bold);
         title_and_url.set_halign(gtk::Align::Start);
         title_and_url.set_margin_start(0);
-        
+
         // Details of the article inside of a gtk::TextView
         let details = gtk::TextView::new().unwrap();
         details.set_halign(gtk::Align::Start);
         details.override_background_color(gtk::StateFlags::empty(), &color!(green));
         details.override_color(gtk::StateFlags::empty(), &color!(white));
-        details.override_font(&header_font);
+        details.override_font(&bold);
         details.set_left_margin(10);
         details.set_right_margin(10);
         details.set_editable(false);
@@ -86,7 +87,5 @@ fn generate_article_widgets(article_box: &gtk::Box, articles: &Vec<Article>) {
         article_box.add(&title_and_url);
         article_box.add(&details);
         article_box.add(&summary);
-        article_box.add(&gtk::Separator::new(gtk::Orientation::Horizontal).unwrap());
     }
 }
-

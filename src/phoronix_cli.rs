@@ -38,4 +38,3 @@ pub fn print_colored() {
         print!("\n");
     }
 }
-
