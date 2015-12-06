@@ -5,11 +5,13 @@ extern crate getopts;
 extern crate gtk;
 extern crate gdk;
 extern crate pango;
-mod article;
-mod homepage;
+mod phoronix {
+    mod article;
+    mod homepage;
+    mod cli;
+    mod gui;
+}
 mod linesplit;
-mod phoronix_cli;
-mod phoronix_gui;
 
 fn main() {
     let args: Vec<String> = std::env::args().collect();
@@ -20,11 +22,11 @@ fn main() {
     let matches = opts.parse(&args[1..]).unwrap();
     if matches.opt_present("h") { print_help(); return; }
     match matches.opt_present("g") {
-        true => phoronix_gui::launch(),
+        true => phoronix::gui::launch(),
         false => {
             match matches.opt_present("n") {
-                true => phoronix_cli::print(),
-                false => phoronix_cli::print_colored(),
+                true => phoronix::cli::print(),
+                false => phoronix::cli::print_colored(),
             };
         },
     };
@@ -36,4 +38,3 @@ fn print_help() {
     println!("    -g, --gui      : launches a GTK3 GUI instead of outputting to the terminal");
     println!("    -n, --no-color : prints to stdout without using colors");
 }
-

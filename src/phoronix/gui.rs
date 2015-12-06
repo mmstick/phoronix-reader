@@ -1,5 +1,5 @@
-use article::Article;
-use homepage;
+use phoronix::article::Article;
+use phoronix::homepage;
 use gtk;
 use gtk::traits::*;
 use gdk::enums::key;

@@ -1,5 +1,5 @@
-use article::Article;
-use homepage;
+use phoronix::article::Article;
+use phoronix::homepage;
 use linesplit;
 use term;
 
