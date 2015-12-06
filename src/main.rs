@@ -6,12 +6,13 @@ extern crate gtk;
 extern crate gdk;
 extern crate pango;
 mod phoronix {
-    mod article;
-    mod homepage;
-    mod cli;
-    mod gui;
+    pub mod article;
+    pub mod homepage;
+    pub mod cli;
+    pub mod gui;
 }
 mod linesplit;
+use phoronix::cli;
 
 fn main() {
     let args: Vec<String> = std::env::args().collect();
@@ -23,12 +24,7 @@ fn main() {
     if matches.opt_present("h") { print_help(); return; }
     match matches.opt_present("g") {
         true => phoronix::gui::launch(),
-        false => {
-            match matches.opt_present("n") {
-                true => phoronix::cli::print(),
-                false => phoronix::cli::print_colored(),
-            };
-        },
+        false => if matches.opt_present("n") { cli::print(); } else { cli::print_colored(); },
     };
 }
 
