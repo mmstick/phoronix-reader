@@ -2,6 +2,7 @@ use article::Article;
 use homepage;
 use gtk;
 use gtk::traits::*;
+use gdk::enums::key;
 use gdk::ffi::GdkRGBA;
 use pango;
 
@@ -30,6 +31,15 @@ pub fn launch() {
     configure_window(&window);
     window.add(&scrolled_window);
     window.show_all();
+
+    // Define actions on key press
+    window.connect_key_press_event(move |_, key| {
+        match key.keyval as i32 {
+            key::Escape => gtk::main_quit(),
+            _ => ()
+        }
+        gtk::signal::Inhibit(false)
+    });
 
     gtk::main();
 }
