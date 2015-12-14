@@ -17,7 +17,7 @@ pub fn launch() {
 
     // Create widgets for the articles
     let article_box = gtk::Box::new(gtk::Orientation::Vertical, 0).unwrap();
-    let articles = Article::get_articles(&homepage::online());
+    let mut articles = Article::get_articles(&homepage::online());
     generate_article_widgets(&article_box, &articles);
     article_box.override_background_color(gtk::StateFlags::empty(), &color!(green));
 
@@ -41,7 +41,16 @@ pub fn launch() {
         gtk::signal::Inhibit(false)
     });
 
+    let refresh_button = gtk::Button::new_with_label("Refresh").unwrap();
+    refresh_button.connect_clicked(move |_| refresh_page(&mut articles, &mut article_box));
+
     gtk::main();
+}
+
+fn refresh_page(articles: &mut Vec<Article>, article_box: &mut gtk::Box) {
+    *articles = Article::get_articles(&homepage::online());
+    *article_box = gtk::Box::new(gtk::Orientation::Vertical, 0).unwrap();
+    generate_article_widgets(article_box, articles);
 }
 
 // configre_window configures the given window.
