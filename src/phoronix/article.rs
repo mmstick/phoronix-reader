@@ -11,7 +11,7 @@ pub struct Article {
 
 impl Article {
     pub fn get_articles(html: &str) -> Vec<Article> {
-        Document::from_str(html).find(Name("article")).iter()
+        Document::from(html).find(Name("article")).iter()
             .map(|node| Article::new(&node)).collect()
     }
     fn new(node: &Node) -> Article {
