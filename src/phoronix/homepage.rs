@@ -7,7 +7,7 @@ pub fn online() -> String {
         header(Connection::close()).send().unwrap();
     let mut body = String::new();
     response.read_to_string(&mut body).unwrap();
-    return body;
+    body
 }
 
 #[allow(dead_code)]

@@ -1,7 +1,6 @@
 extern crate hyper;
 extern crate select;
 extern crate term;
-extern crate getopts;
 
 mod phoronix {
     pub mod article;
@@ -9,25 +8,30 @@ mod phoronix {
     pub mod cli;
 }
 mod linesplit;
+use std::process;
 use phoronix::cli;
 
 fn main() {
-    let args: Vec<String> = std::env::args().collect();
-    let mut opts = getopts::Options::new();
-    opts.optflag("n", "no-color", "prints without colors");
-    opts.optflag("h", "help", "show this information");
-    opts.optflag("g", "gui", "display in a GTK3 GUI (deprecated)");
-    let matches = opts.parse(&args[1..]).unwrap();
-    if matches.opt_present("h") { print_help(); return; }
-    match matches.opt_present("g") {
-        true => println!("GUI support was removed until further notice."),
-        false => if matches.opt_present("n") { cli::print(); } else { cli::print_colored(); },
-    };
+    let args = std::env::args().skip(1);
+    for argument in args {
+        match argument.as_str() {
+            "-n" | "--no-color" => cli::print(),
+            "-h" | "--help" => print_help(),
+            "g" | "--gui" => launch_gui(),
+            _ => println!("phoronix-reader: option '{}' not valid", argument)
+        }
+    }
+    cli::print_colored();
+}
+
+fn launch_gui() {
+    println!("GUI support was removed until further notice.");
+    process::exit(0);
 }
 
 fn print_help() {
-    println!("Prints the latest information from Phoronix.");
-    println!("    -h, --help     : show this information");
-    println!("    -g, --gui      : launches a GTK3 GUI instead of outputting to the terminal (deprecated)");
+    print!("Prints the latest information from Phoronix.\n");
+    print!("    -h, --help     : show this information\n");
+    print!("    -g, --gui      : launches a GTK3 GUI instead of outputting to the terminal (deprecated)\n");
     println!("    -n, --no-color : prints to stdout without using colors");
 }

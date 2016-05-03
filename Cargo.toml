@@ -4,7 +4,6 @@ version = "0.2.2"
 authors = ["Michael Aaron Murphy <mmstickman@gmail.com>"]
 
 [dependencies]
-getopts = "*"
 hyper = "*"
 select = "*"
 term = "*"
