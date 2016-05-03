@@ -16,9 +16,9 @@ fn main() {
     for argument in args {
         match argument.as_str() {
             "-n" | "--no-color" => cli::print(),
-            "-h" | "--help" => print_help(),
-            "g" | "--gui" => launch_gui(),
-            _ => println!("phoronix-reader: option '{}' not valid", argument)
+            "-h" | "--help"     => print_help(),
+            "g" | "--gui"       => launch_gui(),
+            _                   => println!("phoronix-reader: option '{}' not valid", argument)
         }
     }
     cli::print_colored();
