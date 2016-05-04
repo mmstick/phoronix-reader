@@ -4,12 +4,13 @@ use gdk::enums::key;
 use phoronix::article::Article;
 use phoronix::homepage;
 
+/// Launches the GTK3 GUI interface
 pub fn launch_gtk() {
     gtk::init().unwrap_or_else(|_| panic!("phoronix-reader: failed to initialize GTK."));
 
     // Create a ListBox that contains all of our Phoronix articles
     let list_box = gtk::ListBox::new();
-    let articles = refresh_articles(&homepage::offline());
+    let articles = Article::get_articles(&homepage::offline());
     for article in articles {
         let row = gtk::ListBoxRow::new();
         let url = format!("https://phoronix.com/{}", article.link);
@@ -51,9 +52,4 @@ pub fn launch_gtk() {
     });
 
     gtk::main();
-}
-
-#[inline]
-fn refresh_articles(html: &str) -> Vec<Article> {
-    Article::get_articles(html)
 }

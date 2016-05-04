@@ -3,8 +3,9 @@ use std::process;
 use phoronix::article::Article;
 use phoronix::homepage;
 use linesplit;
-use term;
+#[cfg(feature = "enable_colors")] use term;
 
+/// Print the contents of the Phoronix articles to stdout without any colors.
 pub fn print() {
     let stdout = &mut io::stdout();
     let phoronix_articles = Article::get_articles(&homepage::online());
@@ -20,6 +21,8 @@ pub fn print() {
     process::exit(0);
 }
 
+#[cfg(feature = "enable_colors")]
+/// Print the contents of the Phoronix articles with colors.
 pub fn print_colored() {
     let stdout = &mut io::stdout();
     let phoronix_articles = Article::get_articles(&homepage::online());

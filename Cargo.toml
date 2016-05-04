@@ -5,10 +5,11 @@ authors = ["Michael Aaron Murphy <mmstickman@gmail.com>"]
 
 [features]
 enable_gtk = ["gtk", "gdk"]
+enable_colors = ["term"]
 
 [dependencies]
 hyper = "*"
 select = "*"
-term = "*"
+term = { version = "*", optional = true }
 gtk = { version = "0.0.7", features = ["v3_16"], optional = true }
 gdk = { version = "0.3.0", optional = true }
