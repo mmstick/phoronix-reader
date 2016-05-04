@@ -14,6 +14,7 @@ impl Article {
         Document::from(html).find(Name("article")).iter()
             .map(|node| Article::new(&node)).collect()
     }
+    #[inline]
     fn new(node: &Node) -> Article {
         let header = node.find(Name("a")).first().unwrap();
         let mut link = String::from(header.attr("href").unwrap());
