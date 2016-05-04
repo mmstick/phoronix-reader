@@ -1,11 +1,13 @@
 extern crate hyper;
 extern crate select;
 extern crate term;
+#[cfg(feature = "enable_gtk")] extern crate gtk;
 
 mod phoronix {
     pub mod article;
     pub mod homepage;
     pub mod cli;
+    pub mod gtk;
 }
 mod linesplit;
 use std::process;
@@ -17,7 +19,7 @@ fn main() {
         match argument.as_str() {
             "-n" | "--no-color" => cli::print(),
             "-h" | "--help"     => print_help(),
-            "g" | "--gui"       => launch_gui(),
+            "-g" | "--gui"       => launch_gui(),
             _                   => println!("phoronix-reader: option '{}' not valid", argument)
         }
     }
@@ -25,7 +27,7 @@ fn main() {
 }
 
 fn launch_gui() {
-    println!("GUI support was removed until further notice.");
+    phoronix::gtk::launch_gtk();
     process::exit(0);
 }
 

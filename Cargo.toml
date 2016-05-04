@@ -3,7 +3,11 @@ name = "phoronix-reader"
 version = "0.2.2"
 authors = ["Michael Aaron Murphy <mmstickman@gmail.com>"]
 
+[features]
+enable_gtk = ["gtk"]
+
 [dependencies]
 hyper = "*"
 select = "*"
 term = "*"
+gtk = { version = "0.0.7", optional = true }
