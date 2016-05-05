@@ -2,6 +2,11 @@
 name = "phoronix-reader"
 version = "0.2.3"
 authors = ["Michael Aaron Murphy <mmstickman@gmail.com>"]
+description = "A simple CLI and GTK Phoronix homepage reader application."
+repository = "https://github.com/mmstick/phoronix-reader"
+readme = "README.md"
+keywords = ["phoronix"]
+license = "GPL"
 
 [features]
 enable_gtk = ["gtk", "gdk"]
