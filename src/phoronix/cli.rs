@@ -2,7 +2,7 @@ use std::io::{self, Write};
 use std::process;
 use phoronix::article::Article;
 use phoronix::homepage;
-use linesplit;
+use linesplit::CharSplit;
 #[cfg(feature = "enable_colors")] use term;
 
 /// Print the contents of the Phoronix articles to stdout without any colors.
@@ -14,7 +14,7 @@ pub fn print() {
         print!("Link:    https://www.phoronix.com/{}\n", article.link);
         print!("Details: {}\n", article.details);
         print!("Summary:\n");
-        for line in linesplit::split_by_chars(&article.summary, 77) { print!(" - {}\n", line); }
+        for line in article.summary.split_by_chars(77) { print!(" - {}\n", line); }
         print!("\n");
     }
     let _ = stdout.flush();
@@ -38,7 +38,7 @@ pub fn print_colored() {
         print!("https://www.phoronix.com/{}\n", article.link);
         terminal.reset().unwrap();
         print!("Details: {}\nSummary:\n", article.details);
-        for line in linesplit::split_by_chars(&article.summary, 77) {
+        for line in article.summary.split_by_chars(77) {
             print!(" - ");
             terminal.attr(term::Attr::Bold).unwrap();
             print!("{}\n", line);

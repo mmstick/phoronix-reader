@@ -1,6 +1,6 @@
 [package]
 name = "phoronix-reader"
-version = "0.2.2"
+version = "0.2.3"
 authors = ["Michael Aaron Murphy <mmstickman@gmail.com>"]
 
 [features]
