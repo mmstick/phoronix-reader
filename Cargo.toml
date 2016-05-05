@@ -6,7 +6,7 @@ description = "A simple CLI and GTK Phoronix homepage reader application."
 repository = "https://github.com/mmstick/phoronix-reader"
 readme = "README.md"
 keywords = ["phoronix"]
-license = "GPL"
+license = "GPL-2.0"
 
 [features]
 enable_gtk = ["gtk", "gdk"]
