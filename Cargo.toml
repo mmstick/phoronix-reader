@@ -15,6 +15,6 @@ enable_colors = ["term"]
 [dependencies]
 hyper = "0.9.2"
 select = "0.3.0"
-term = { version = "*", optional = true }
+term = { version = "0.4.4", optional = true }
 gtk = { version = "0.0.7", features = ["v3_16"], optional = true }
 gdk = { version = "0.3.0", optional = true }
